@@ -8,10 +8,13 @@
 
  - DockerHub 的镜像：`billin9/v2ray`
  
-## CONFIG_JSON 示例
+## 运行
 
-```json
-'{"inbounds":[{"port":8080,"protocol":"vmess","settings":{"clients":[{"id":"933ef646-9ea8-e43f-46d2-035513f4dc39","alterId":69}]},"streamSettings":{"network":"ws","wsSettings":{"path":"/ws"}}}],"outbounds":[{"protocol":"freedom","settings":{}}]}'
+```shell
+docker run -d --name v2ray \
+    -p 8080:8080 \
+    -e CONFIG_JSON='{"inbounds":[{"port":8080,"protocol":"vmess","settings":{"clients":[{"id":"933ef646-9ea8-e43f-46d2-035513f4dc39","alterId":69}]},"streamSettings":{"network":"ws","wsSettings":{"path":"/ws"}}}],"outbounds":[{"protocol":"freedom","settings":{}}]}' \
+    billin9/v2ray
 ```
 
 ## 注意
