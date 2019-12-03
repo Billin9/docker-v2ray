@@ -6,13 +6,13 @@
 
 ## 镜像
 
- - DockerHub 的镜像：`billin9/docker-v2ray`。
+ - DockerHub 的镜像：`billin9/v2ray`
  
-## ENV 设定
+## CONFIG_JSON 示例
 
-### CONFIG_JSON
-
-`CONFIG_JSON` > `服务端 Websocket 配置文件`。
+```json
+'{"inbounds":[{"port":8080,"protocol":"vmess","settings":{"clients":[{"id":"933ef646-9ea8-e43f-46d2-035513f4dc39","alterId":69}]},"streamSettings":{"network":"ws","wsSettings":{"path":"/ws"}}}],"outbounds":[{"protocol":"freedom","settings":{}}]}'
+```
 
 ## 注意
 
